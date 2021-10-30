@@ -16,8 +16,11 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from first_project import views
+from django.conf.urls import include
 
 urlpatterns = [
-    url(r'^$', views.index),
+    url(r'^$', views.index, name='index'),
+    url(r'^fakeInfo/', views.fakeInfo, name='fakeInfo'),
+    url(r'^first_project/', include('first_project.urls')),
     url(r'^admin/', admin.site.urls),
 ]
