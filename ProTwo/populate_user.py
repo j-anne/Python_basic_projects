@@ -10,13 +10,6 @@ from appTwo.models import User
 from faker import Faker
 
 fakegen = Faker()
-users = ['First Name', 'Last Name', 'Email']
-
-# def add_name():
-#     n = User.objects.get_or_create(first_name=random.choice(users))[0]
-#     n.save()
-#     return n
-
 
 def populate(N=5):
     for entry in range(N):
